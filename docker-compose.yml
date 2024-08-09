@@ -1,0 +1,16 @@
+version: '3'
+services:
+  influxdb:
+    image: influxdb:2
+    ports:
+      - 8086:8086
+    volumes:
+      - ./volumes/influxdb_data:/var/lib/influxdb2
+      - ./volumes/influxdb_config:/etc/influxdb2
+
+  grafana:
+    image: grafana/grafana:10.0.0
+    ports:
+      - 3000:3000
+    volumes:
+      - ./volumes/grafana_data:/var/lib/grafana

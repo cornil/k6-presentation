@@ -1,0 +1,1 @@
+k6 run .\1_first_run.js
